@@ -210,7 +210,7 @@ stage_newlib_extract() {
 stage_gcc_patch() {
 	echo "- Patching GCC for t-arm-elf"
 	cd $TOOLCHAIN_PATH
-	log patch -p0 < $PATCH_GCC620_ARMELF
+	log patch -p0 < $PATCH_GCC412_ARMELF
 	checkRet "Failed to apply patch for t-arm-elf"
 }
 
