@@ -15,16 +15,16 @@ fi
 
 # Package Verions
 PKG_NAMES[0]="binutils-2.17.tar.bz2"
-PKG_NAMES[1]="gcc-6.2.0.tar.bz2"
+PKG_NAMES[1]="gcc-4.1.2.tar.bz2"
 PKG_NAMES[2]="newlib-1.14.0.tar.gz"
 
 # Package URLs
 PKG_URLS[0]="http://ftp.gnu.org/gnu/binutils/binutils-2.17.tar.bz2"
-PKG_URLS[1]="http://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2"
+PKG_URLS[1]="http://ftp.gnu.org/gnu/gcc/gcc-4.1.2/gcc-4.1.2.tar.bz2"
 PKG_URLS[2]="ftp://sourceware.org/pub/newlib/newlib-1.14.0.tar.gz"
 
 # Package Patches
-PATCH_GCC620_ARMELF="t-arm-elf.patch"
+PATCH_GCC412_ARMELF="t-arm-elf.patch"
 PATCH_NEWLIB_MAKEINFO="newlib-1.14.0-missing-makeinfo.patch"
 
 
@@ -217,7 +217,7 @@ stage_gcc_patch() {
 stage_gcc_configure() {
 	echo "- Configuring GCC"
 	cd $TOOLCHAIN_PATH/gcc-build
-	log ../gcc-6.2.0/configure --target=arm-elf --prefix=$PREFIX \
+	log ../gcc-4.1.2/configure --target=arm-elf --prefix=$PREFIX \
 			--enable-interwork --enable-multilib --with-fpu=vfp \
 			--enable-languages="c,c++" --with-newlib \
 			--with-headers=../newlib-1.14.0/newlib/libc/include --disable-werror
