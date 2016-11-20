@@ -14,8 +14,8 @@ have to run clean for it to cleanup the packages/src directories.
 The commands are as follows:
 
 ## Make toolchain
-./build-toolchain.sh make
+sudo ./build-toolchain.sh make
 ## Clean toolchain
-./build-toolchain.sh clean
+sudo ./build-toolchain.sh clean
 
 Logs are stored in $TOOLCHAIN_PATH/build.log ( by default /tmp/ipl-toolchain/build.log )
